@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'home#index'
-  get '/search' => "home#searchbook"
+  get '/register_test' => "home#register_test"
   get '/register' => "home#register"
+  post '/save_book' => "home#save_book"
+  get '/search' => "home#searchbook"
+  get '/board' => "home#board"
   
   #get 'index.html' => "home#index"
   #get 'home/basic_table'

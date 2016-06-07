@@ -11,11 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522171656) do
+ActiveRecord::Schema.define(version: 20160607111229) do
+
+  create_table "books", force: :cascade do |t|
+    t.string   "title",                     null: false
+    t.string   "major"
+    t.string   "college"
+    t.string   "author"
+    t.string   "publisher"
+    t.string   "coursename"
+    t.string   "profname"
+    t.string   "seller_id",    default: "", null: false
+    t.integer  "seller_price", default: 0,  null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "buyers", force: :cascade do |t|
+    t.string   "buyer_id",                null: false
+    t.integer  "buyer_price", default: 0, null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "report_boards", force: :cascade do |t|
+    t.string   "reported_id",                 null: false
+    t.string   "report_id",      default: "", null: false
+    t.string   "report_content", default: "", null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
+    t.string   "school",                              null: false
     t.string   "encrypted_password",     default: "", null: false
+    t.string   "type_number",            default: "", null: false
+    t.string   "contact_number",         default: "", null: false
+    t.integer  "report_numver",          default: 0
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

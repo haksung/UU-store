@@ -1,34 +1,71 @@
- <style type="text/css">   
-
-    #formul {  
-        padding: 20px 0px 0px 30px;  
-    }  
-    
-    .campos {  
-        width: 700px;                 
-        font-size:12pt;                 
-    }  
-    
-    .boton{ 
-        font-size:16px; 
-        font-weight:bold; 
-    } 
-    
-</style>  
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
-              <div id ="formul">
-                  <h1>Register a new book:</h1>
-				    <form>
-                      <label for="major">Major:</label><br> <input class="campos" type="text" name="major" id="major"/><br>
-                      <label for="title">Title:</label><br> <input class="campos" type="text" name="title" id="title"/><br>
-                      <label for="author">Author:</label><br> <input class="campos" type="text" name="author" id="author"/><br>
-                      <label for="publisher">Publisher:</label><br> <input class="campos" type="text" name="publisher" id="publisher"/><br>
-                      <label for="price">Price:</label><br> <input class="campos" type="text" name="price" id="price"/><br>
-                      <label for="photo">Cover photo:</label><br> <input type="file" name="photo" id="photo"><br>
-                      <label for="comments">Comments:</label><br> <textarea class="campos" rows="10" name="comments"></textarea><br>  
-                      <input class="boton" type="submit" name="submit" value="Submit">
-                    </form>
-              </div>
+    <div class="alert alert-info" style="margin-top:20px;"><h2><b> > Book information</b> (typing information that you know)</h2></div>
+  	<!-- BASIC Book information -->
+  	<div class="row mt">
+  		<div class="col-lg-12">
+          <div class="form-panel">
+              <form class="form-horizontal style-form" method="post" enctype="multipart/form-data" action="save_book">
+                  <input type="hidden" name="user_email" value="<%= @user_email %>">
+                  <div class="form-group">
+                      <label class="col-sm-2 col-sm-2 control-label" style="margin-left:20px;"><b>Title</b></label>
+                      <div class="col-sm-8">
+                          <input name="title" type="text" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 col-sm-2 control-label" style="margin-left:20px;"><b>Major</b></label>
+                      <div class="col-sm-4">
+                          <input name="major" type="text" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 col-sm-2 control-label" style="margin-left:20px;"><b>College</b></label>
+                      <div class="col-sm-4">
+                          <input name="college" type="text" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 col-sm-2 control-label" style="margin-left:20px;"><b>Author</b></label>
+                      <div class="col-sm-8">
+                          <input name="author" type="text" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 col-sm-2 control-label" style="margin-left:20px;"><b>Publisher</b></label>
+                      <div class="col-sm-8">
+                          <input name="publisher" type="text" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 col-sm-2 control-label" style="margin-left:20px;"><b>Course name</b></label>
+                      <div class="col-sm-6">
+                          <input name="course" type="text" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 col-sm-2 control-label" style="margin-left:20px;"><b>Prof name</b></label>
+                      <div class="col-sm-3">
+                          <input name="prof" type="text" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 col-sm-2 control-label" style="margin-left:20px;"><b>Price</b></label>
+                      <div class="col-sm-3">
+                          <input name="price" type="text" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 col-sm-2 control-label" style="margin-left:20px;"><b>Book image</b></label>
+                      <input name="image" class="col-sm-8" type="file" name="pic" accept="image/*">
+                  </div>
+                  <div class="form-group">
+                      <button type="submit" class="btn btn-theme" style="float: right; margin-right: 30px;">Register!</button>
+                  </div>
+
+              </form>
+          </div>
+  		</div><!-- col-lg-12-->      	
+  	</div><!-- /row -->
