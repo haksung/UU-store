@@ -3,7 +3,7 @@
     *********************************************************************************************************************************************************** -->
     <!--main content start-->
     
-            <form name="search" method="get" action="a.jsp" onsubmit="return check()">
+            <!--<form name="search" method="get" action="a.jsp" onsubmit="return check()">
                 <table width="200" border="0" align="center">
                     <tr>
                         <td align="center" valign="bottom">
@@ -21,89 +21,171 @@
                         </td>
                     </tr>
                 </table>
-            </form>>
-        <style type="text/css">
-	
-        .table-cont{
-        	width: 100%;
-        	padding: 20px;
-            font-family: sans-serif;
-        }
-        .book{
-            width: 100%;
-            height: 150px;
-            border: 1px solid #5B9AD5;
-            border-radius: 5px;
-            padding: 12px;
-            margin-bottom: 20px;
-        }
-        .img{
-        	display: inline-block;
-            width: 100px;
-            border-right: 1px solid #5B9AD5;
-            height: 120px;
-            padding-right: 15px;
-            margin-right: 15px;
-            float: left;
-        }
-        .img img{
-        	width: 100%;
-            height: 120px;
-        }
-        
-        .info{
-        	display: inline-block;
-        	float: left;
-        }
-        .info p{
-        	margin: 0px;
-        	font-family: sans-serif;
-        	font-size: 12px;
-        	line-height: 21px;
-        }
-        .buy{
-            display: inline-block;
-            float: right;
-            text-align: center;
-            width: 120px;
-            padding: 14px 0px 0px 0px;
-            border-left: 1px solid #5B9AD5;
-            height: 100px;
-        }
-        .buy p{
-        	font-weight: bold;
-        }
-        .buy a{
-            background: #5B9AD5;
-            padding: 10px 30px 10px 30px;
-            color: #fff;
-            text-decoration: none;
-            font-family: sans-serif;
-            font-size: 14px;
-            line-height: 21px;
-        }
-        .buy a:hover{
-            background: #3570A7;
-        }
-        
-        </style>
-        
-        <div class="table-cont">
-
-        	<div class="book">
-        		<div class="img">
-        			<img src="">
-        		</div>
-        		<div class="info">
-        			<p><strong>Title: </strong>Digital systems</p>
-        			<p><strong>Author: </strong>Erick Alcantar</p>
-        			<p><strong>Publisher: </strong>SKKU</p>
-        			<p><strong>Course Name: </strong>Digital systems</p>
-        			<p><strong>Professor Name: </strong>Lee</p>
-        		</div>
-        		<div class="buy">
-        			<p>10000 KRW</p>
-        			<a href="#" class="btn">BUY</a>
-        		</div>
-        	</div>
+            </form>-->
+            
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+            <div class="input-group" id="adv-search">
+                <input type="text" class="form-control" placeholder="Search book" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <form class="form-horizontal" role="form">
+                                  <div class="form-group">
+                                    <label for="filter">Filter by</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>All books</option>
+                                        <option value="1">Title</option>
+                                        <option value="2">Major</option>
+                                        <option value="3">College</option>
+                                        <option value="4">Author</option>
+                                        <option value="5">Publisher</option>
+                                        <option value="6">Course name</option>
+                                        <option value="7">Prof name</option>
+                                    </select>
+                                  </div>
+                                </form>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary"><b>Search</b></button>
+                    </div>
+                </div>
+            </div>
+          </div>
         </div>
+	</div>
+</div>
+<style type="text/css">
+	
+.table-cont{
+	width: 100%;
+	padding: 20px;
+    font-family: sans-serif;
+}
+.book{
+    width: 100%;
+    height: 150px;
+    border: 1px solid #5B9AD5;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+.img{
+	display: inline-block;
+    width: 100px;
+    border-right: 1px solid #5B9AD5;
+    height: 120px;
+    padding-right: 15px;
+    margin-right: 15px;
+    float: left;
+}
+.img img{
+	width: 100%;
+    height: 120px;
+}
+
+.info{
+	display: inline-block;
+	float: left;
+}
+.info p{
+	margin: 0px;
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: 21px;
+}
+.buy{
+    display: inline-block;
+    float: right;
+    text-align: center;
+    width: 120px;
+    padding: 14px 0px 0px 0px;
+    border-left: 1px solid #5B9AD5;
+    height: 100px;
+}
+.buy p{
+	font-weight: bold;
+}
+.buy a{
+    background: #5B9AD5;
+    padding: 10px 30px 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+}
+.buy a:hover{
+    background: #3570A7;
+}
+
+body {
+    padding-top: 100px;
+}
+.dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+}
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+.btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    #adv-search {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 500px;
+    }
+}
+
+</style>
+
+
+
+<div class="table-cont">
+
+	<div class="book">
+		<div class="img">
+			<img src="">
+		</div>
+		<div class="info">
+			<p><strong>Title: </strong>Digital systems</p>
+			<p><strong>Author: </strong>Erick Alcantar</p>
+			<p><strong>Publisher: </strong>SKKU</p>
+			<p><strong>Course Name: </strong>Digital systems</p>
+			<p><strong>Professor Name: </strong>Lee</p>
+		</div>
+		<div class="buy">
+			<p>10000 KRW</p>
+			<a href="#" class="btn">BUY</a>
+		</div>
+	</div>
+</div>

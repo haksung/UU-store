@@ -119,3 +119,15 @@
 	</div>
 
 </div>
+<!-- this will be used later -->
+<% @books.each do |p|%>
+     <h1><%= p.seller_id %></h1>
+     <h1><%= p.major %></h1>
+     <h1><%= p.college %></h1>
+     <h1><%= p.author %></h1>
+     <h1><%= p.title %></h1>
+     <h1><%= p.publisher %></h1>
+     <h1><%= p.seller_price %></h1>
+     <h1><%= p.profname %></h1>
+     <h1><%= p.coursename %></h1>
+ <% end %>
