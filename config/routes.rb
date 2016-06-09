@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post '/save_book' => "home#save_book"
   get '/search' => "home#searchbook"
   get '/board' => "home#board"
+  get '/report' => "home#report"
   
   #get 'index.html' => "home#index"
   #get 'home/basic_table'

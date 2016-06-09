@@ -29,6 +29,15 @@ class HomeController < ApplicationController
     book = Book.new(title: params[:title], major: params[:major], college: params[:college], author: params[:author], publisher: params[:publisher],
                   coursename: params[:course], profname: params[:prof], seller_id: params[:user_email], seller_price: params[:price])
     if book.save
+      file = params[:image]
+      #uploader = AvatarUploader.new
+      #uploader.store!(file)
+      
+      u = Saver.new
+      u.avatar = file
+      u.save!
+      u.avatar.url
+      u.avatar_identifier = seller_id + title + ".png"
       redirect_to "/board"
     else
       render :text => "Error!"

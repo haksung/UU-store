@@ -1,0 +1,32 @@
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+    <div class="alert alert-info" style="margin-top:20px;"><h2><b> > Report user</b></h2></div>
+  	<!-- BASIC Book information -->
+  	<div class="row mt">
+  		<div class="col-lg-12">
+          <div class="form-panel">
+              <form class="form-horizontal style-form" method="post" enctype="multipart/form-data" action="save_book">
+                  <input type="hidden" name="user_email" value="<%= @user_email %>">
+                  <div class="form-group">
+                      <label class="col-sm-2 col-sm-2 control-label" style="margin-left:20px;"><b>User to report</b></label>
+                      <div class="col-sm-8">
+                          <input name="user" type="text" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 col-sm-2 control-label" style="margin-left:20px;"><b>Reason</b></label>
+                      <div class="col-sm-8">
+                          <input name="reason" type="text" class="form-control">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <button type="submit" class="btn btn-theme" style="float: right; margin-right: 30px;">Submit</button>
+                  </div>
+
+              </form>
+          </div>
+  		</div><!-- col-lg-12-->      	
+  	</div><!-- /row -->
