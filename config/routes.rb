@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'home#index'
+  root 'home#board'
   get '/register_test' => "home#register_test"
   get '/register' => "home#register"
   post '/save_book' => "home#save_book"
   get '/search' => "home#searchbook"
   get '/board' => "home#board"
+  get '/board/:page_id' => "home#board"
   get '/report' => "home#report"
+  get '/users/board' => "home#user_board"
   
   #get 'index.html' => "home#index"
   #get 'home/basic_table'

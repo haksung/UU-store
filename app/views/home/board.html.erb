@@ -66,68 +66,27 @@
 </style>
 
 <div class="table-cont">
-
+	<% @books.slice(5*(@select_page-1), 5*(@select_page)).each do |p| %>
 	<div class="book">
 		<div class="img">
 			<img src="">
 		</div>
 		<div class="info">
-			<p><strong>Title: </strong>Digital systems</p>
-			<p><strong>Author: </strong>Erick Alcantar</p>
-			<p><strong>Publisher: </strong>SKKU</p>
-			<p><strong>Course Name: </strong>Digital systems</p>
-			<p><strong>Professor Name: </strong>Lee</p>
+			<p><strong>Title: </strong><%= p.title %></p>
+			<p><strong>Author: </strong><%= p.author %></p>
+			<p><strong>Publisher: </strong><%= p.publisher %></p>
+			<p><strong>Course Name: </strong><%= p.coursename %></p>
+			<p><strong>Professor Name: </strong><%= p.profname %></p>
+			<p><strong>Seller: </strong><%= p.seller_id %></p>
 		</div>
 		<div class="buy">
-			<p>10000 KRW</p>
+			<p><%= p.seller_price%> KRW</p>
 			<a href="#" class="btn">BUY</a>
 		</div>
 	</div>
-
-	<div class="book">
-		<div class="img">
-			<img src="">
-		</div>
-		<div class="info">
-			<p><strong>Title: </strong>Digital systems</p>
-			<p><strong>Author: </strong>Erick Alcantar</p>
-			<p><strong>Publisher: </strong>SKKU</p>
-			<p><strong>Course Name: </strong>Digital systems</p>
-			<p><strong>Professor Name: </strong>Lee</p>
-		</div>
-		<div class="buy">
-			<p>10000 KRW</p>
-			<a href="#" class="btn">BUY</a>
-		</div>
-	</div>
-
-	<div class="book">
-		<div class="img">
-			<img src="">
-		</div>
-		<div class="info">
-			<p><strong>Title: </strong>Digital systems</p>
-			<p><strong>Author: </strong>Erick Alcantar</p>
-			<p><strong>Publisher: </strong>SKKU</p>
-			<p><strong>Course Name: </strong>Digital systems</p>
-			<p><strong>Professor Name: </strong>Lee</p>
-		</div>
-		<div class="buy">
-			<p>10000 KRW</p>
-			<a href="#" class="btn">BUY</a>
-		</div>
-	</div>
-
+	<% end %>
+	
+	<% (1..@book_num).each do |i| %>
+		<a href="/board/<%= i %>"> <%= i %></a>
+	<% end %>
 </div>
-<!-- this will be used later -->
-<% @books.each do |p|%>
-     <h1><%= p.seller_id %></h1>
-     <h1><%= p.major %></h1>
-     <h1><%= p.college %></h1>
-     <h1><%= p.author %></h1>
-     <h1><%= p.title %></h1>
-     <h1><%= p.publisher %></h1>
-     <h1><%= p.seller_price %></h1>
-     <h1><%= p.profname %></h1>
-     <h1><%= p.coursename %></h1>
- <% end %>
