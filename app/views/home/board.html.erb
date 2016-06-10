@@ -69,7 +69,7 @@
 	<% @books.slice(5*(@select_page-1), 5*(@select_page)).each do |p| %>
 	<div class="book">
 		<div class="img">
-			<img src="">
+			<%= image_tag("SE.jpg") %>
 		</div>
 		<div class="info">
 			<p><strong>Title: </strong><%= p.title %></p>
@@ -81,7 +81,7 @@
 		</div>
 		<div class="buy">
 			<p><%= p.seller_price%> KRW</p>
-			<a href="#" class="btn">BUY</a>
+			<a href="/buy_test/<%= p.id %>" class="btn">BUY</a>
 		</div>
 	</div>
 	<% end %>

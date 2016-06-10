@@ -8,7 +8,16 @@ Rails.application.routes.draw do
   get '/board' => "home#board"
   get '/board/:page_id' => "home#board"
   get '/report' => "home#report"
-  get '/users/board' => "home#user_board"
+  get '/buy/:book_id' => "home#buy"
+  get '/buy_now/:book_id' => "home#buy_now"
+  post '/nego/:book_id' => "home#nego"
+  
+  get '/:nothing/board' => "home#user_board"
+  get '/:nothing/register' => "home#user_register"
+  get '/:nothing/search' => "home#user_search"
+  get '/:nothing/report' => "home#user_report"
+  get '/buy_test/:book_id' => "home#buy_test"
+  
   
   #get 'index.html' => "home#index"
   #get 'home/basic_table'

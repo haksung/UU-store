@@ -1,6 +1,7 @@
-class CreateBooks < ActiveRecord::Migration
+class CreateBooks < ActiveRecord::BASE
   def change
     create_table :books do |t|
+      mount_uploader :avatar, AvatarUploader
       t.string  :title,               null: false, defalut: ""
       t.string  :major
       t.string  :college

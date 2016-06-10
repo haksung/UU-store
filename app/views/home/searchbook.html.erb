@@ -25,39 +25,42 @@
             
 <div class="container">
 	<div class="row">
-		<div class="col-md-12" style="margin-top: 100px;">
+		<div class="col-md-12" style="margin-top: 50px; margin-bottom: 500px; margin-left: -100px;">
             <div class="input-group" id="adv-search">
-                <input type="text" class="form-control" placeholder="Search book" />
-                <div class="input-group-btn">
-                    <div class="btn-group" role="group">
-                        <div class="dropdown dropdown-lg">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                            <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <form class="form-horizontal" role="form">
-                                  <div class="form-group">
-                                    <label for="filter">Filter by</label>
-                                    <select class="form-control">
-                                        <option value="0" selected>All books</option>
-                                        <option value="1">Title</option>
-                                        <option value="2">Major</option>
-                                        <option value="3">College</option>
-                                        <option value="4">Author</option>
-                                        <option value="5">Publisher</option>
-                                        <option value="6">Course name</option>
-                                        <option value="7">Prof name</option>
-                                    </select>
-                                  </div>
-                                </form>
+                <form class="form-horizontal style-form" action="/board" method="get">
+                      <div class="input-group-btn">
+                        <input type="text" class="form-control" placeholder="Search book" />
+                        <div class="btn-group" role="group">
+                            <div class="dropdown dropdown-lg">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                      <form>
+                                          <div class="form-group">
+                                        <label for="filter">Filter by</label>
+                                        <select class="form-control">
+                                            <option value="0" selected>All books</option>
+                                            <option value="1">Title</option>
+                                            <option value="2">Major</option>
+                                            <option value="3">College</option>
+                                            <option value="4">Author</option>
+                                            <option value="5">Publisher</option>
+                                            <option value="6">Course name</option>
+                                            <option value="7">Prof name</option>
+                                        </select>
+                                      </div>
+                                    </form>
+                                </div>
                             </div>
+                            <button type="button" class="btn btn-primary"><b> Search </b></button>
                         </div>
-                        <button type="button" class="btn btn-primary"><b>Search</b></button>
                     </div>
-                </div>
+                </form>
             </div>
           </div>
         </div>
 	</div>
 </div>
+
 <style type="text/css">
 	
 .table-cont{
@@ -167,25 +170,3 @@ body {
 }
 
 </style>
-
-
-
-<div class="table-cont">
-
-	<div class="book">
-		<div class="img">
-			<img src="">
-		</div>
-		<div class="info">
-			<p><strong>Title: </strong>Digital systems</p>
-			<p><strong>Author: </strong>Erick Alcantar</p>
-			<p><strong>Publisher: </strong>SKKU</p>
-			<p><strong>Course Name: </strong>Digital systems</p>
-			<p><strong>Professor Name: </strong>Lee</p>
-		</div>
-		<div class="buy">
-			<p>10000 KRW</p>
-			<a href="#" class="btn">BUY</a>
-		</div>
-	</div>
-</div>

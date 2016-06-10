@@ -11,25 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160608035828) do
+ActiveRecord::Schema.define(version: 20160610001632) do
 
   create_table "books", force: :cascade do |t|
-    t.string   "title",                     null: false
+    t.string   "title",                         null: false
     t.string   "major"
     t.string   "college"
     t.string   "author"
     t.string   "publisher"
     t.string   "coursename"
     t.string   "profname"
-    t.string   "seller_id",    default: "", null: false
-    t.integer  "seller_price", default: 0,  null: false
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "seller_id",    default: "",     null: false
+    t.integer  "seller_price", default: 999999, null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "avatar"
   end
 
   create_table "buyers", force: :cascade do |t|
     t.string   "buyer_id",                null: false
     t.integer  "buyer_price", default: 0, null: false
+    t.integer  "book_id"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
@@ -59,7 +61,6 @@ ActiveRecord::Schema.define(version: 20160608035828) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
